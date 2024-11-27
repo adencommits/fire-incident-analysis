@@ -24,6 +24,13 @@ This CSV file contains the fire incident data. The columns in the file are:
 - `Latitude`: Latitude of the incident location.
 - `Longitude`: Longitude of the incident location.
 
+```csv
+Estimated_Dollar_Loss,Number_of_responding_personnel,Possible_Cause,TFS_Arrival_Time,Latitude,Longitude
+20000,47,52 - Electrical Failure,2020-01-01T00:46:05,43.71523573,-79.23910745
+500,22,"98 - Unintentional, cause undetermined",2020-01-01T00:55:17,43.68760327,-79.35415411
+1000,30,"Fire - Unknown Cause",2020-01-01T01:05:10,43.75849216,-79.31223325
+```
+
 ### 3. Performance Measurements
 
 The script measures and compares the following for both the Linked List and the Binary Search Tree:
@@ -54,4 +61,3 @@ The results are plotted using Matplotlib to visually compare the performance of 
 ### 5. License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
