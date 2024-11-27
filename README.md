@@ -24,6 +24,8 @@ This CSV file contains the fire incident data. The columns in the file are:
 - `Latitude`: Latitude of the incident location.
 - `Longitude`: Longitude of the incident location.
 
+Example data (first 3 lines):
+
 ```csv
 Estimated_Dollar_Loss,Number_of_responding_personnel,Possible_Cause,TFS_Arrival_Time,Latitude,Longitude
 20000,47,52 - Electrical Failure,2020-01-01T00:46:05,43.71523573,-79.23910745
