@@ -1,62 +1,67 @@
-# Fire Incident Analysis with Data Structures
+```markdown
+# Fire Incident Data Analysis: Linked List vs Binary Search Tree
 
-## Overview
-This project analyzes fire incident data from the Greater Toronto Area (GTA) using two common data structures: a Linked List and a Binary Search Tree (BST). The goal is to evaluate and compare the performance of these structures when inserting and constructing trees from fire incident data.
+This project analyzes fire incident data from the Greater Toronto Area (GTA) by comparing the performance of a Linked List and a Binary Search Tree (BST) for storing and processing fire data. It measures and visualizes insertion and construction times for each data structure.
 
-The project loads data from a CSV file (`fires.csv`), creates instances of fire incidents, and builds both a Linked List and a Binary Search Tree. It then measures the insertion and construction times for each data structure as the number of fire incidents increases. The results are visualized in a set of plots to compare the performance of each data structure.
+## Project Structure
 
-## Key Features
-- **Fire Incident Class**: Stores information about each fire, such as the loss, responding personnel, cause, time, and geographical coordinates.
-- **Linked List**: Implements a sorted linked list to store fire incidents based on the number of responding personnel.
-- **Binary Search Tree (BST)**: Implements a BST to store fire incidents in a similar manner to the linked list, allowing comparison of performance for insertion and construction.
-- **Performance Comparison**: Measures and compares the insertion times and construction times for both data structures.
+### 1. `fire_incident_analysis.py`
 
-## Requirements
-- Python 3.x
-- Matplotlib (for data visualization)
-- CSV module (for reading the fire data)
-  
-## Installation
-To get started with this project, follow the instructions below:
+This script processes fire data, builds a linked list and binary search tree, and measures the performance of both data structures. Key components include:
 
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd <repository-directory>
-   ```
+- **Fire class**: Represents a fire incident, storing relevant data such as loss amount, number of responding personnel, cause, time, and location.
+- **LinkedListNode class**: Implements a linked list data structure to store fire incidents in sorted order based on the number of responding personnel.
+- **BSTTree class**: Implements a binary search tree to store fire incidents and perform insertions efficiently.
+- **Main execution**: The script reads fire data from a CSV file, constructs both data structures, measures performance, and visualizes the results using Matplotlib.
 
-2. Install the required dependencies:
-   ```bash
-   pip install matplotlib
-   ```
+### 2. `fires.csv`
 
-3. Ensure you have the `fires.csv` file, which contains the fire incident data. You can use the example provided in the repository.
+This CSV file contains the fire incident data. The columns in the file are:
 
-## Files Overview
-- **fire_analysis.py**: This is the main script that performs the analysis. It includes the classes `Fire`, `LinkedListNode`, and `BSTTree`, as well as the functions to read data, build the data structures, and perform the performance analysis.
-- **fires.csv**: A CSV file containing data on fire incidents. The columns include the estimated dollar loss, the number of responding personnel, the cause of the fire, the time of arrival, and the geographical coordinates.
-- **output_plots**: After running the script, performance comparison plots are generated to show the insertion and construction time comparisons between the Linked List and BST.
+- `Estimated_Dollar_Loss`: Dollar value of the fire damage.
+- `Number_of_responding_personnel`: Number of personnel who responded to the fire.
+- `Possible_Cause`: The potential cause of the fire.
+- `TFS_Arrival_Time`: The timestamp when Toronto Fire Services arrived at the scene.
+- `Latitude`: Latitude of the incident location.
+- `Longitude`: Longitude of the incident location.
 
-## How to Run
-1. Place the `fires.csv` file in the same directory as `fire_analysis.py`.
+Example data (first 3 lines):
 
-2. Run the Python script:
-   ```bash
-   python fire_analysis.py
-   ```
-
-3. The script will generate two plots:
-   - **Insertion Time Plot**: Compares the time taken to insert fire incidents into the Linked List and BST.
-   - **Construction Time Plot**: Compares the time taken to build the Linked List and BST from the data.
-
-## Example CSV Format (`fires.csv`):
 ```csv
 Estimated_Dollar_Loss,Number_of_responding_personnel,Possible_Cause,TFS_Arrival_Time,Latitude,Longitude
 20000,47,52 - Electrical Failure,2020-01-01T00:46:05,43.71523573,-79.23910745
 500,22,"98 - Unintentional, cause undetermined",2020-01-01T00:55:17,43.68760327,-79.35415411
-...
+1000,30,"Fire - Unknown Cause",2020-01-01T01:05:10,43.75849216,-79.31223325
 ```
 
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+### 3. Performance Measurements
+
+The script measures and compares the following for both the Linked List and the Binary Search Tree:
+
+- **Insertion Time**: The time it takes to insert fire incidents into each data structure.
+- **Construction Time**: The time it takes to build the entire linked list or binary search tree from a set of fire incidents.
+
+The results are plotted using Matplotlib to visually compare the performance of the two data structures as the number of fire incidents increases.
+
+### 4. Example Usage
+
+1. Ensure you have the required libraries installed:
+
+    ```bash
+    pip install matplotlib
+    ```
+
+2. Run the script:
+
+    ```bash
+    python fire_incident_analysis.py
+    ```
+
+3. The script will generate two plots:
+   - **Insertion Time**: A comparison of how long it takes to insert fire incidents into the Linked List and the Binary Search Tree.
+   - **Construction Time**: A comparison of the time taken to construct the entire data structure.
+
+### 5. License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ```
