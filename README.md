@@ -1,4 +1,3 @@
-```
 # Fire Incident Data Analysis: Linked List vs Binary Search Tree
 
 This project analyzes fire incident data from the Greater Toronto Area (GTA) by comparing the performance of a Linked List and a Binary Search Tree (BST) for storing and processing fire data. It measures and visualizes insertion and construction times for each data structure.
@@ -24,15 +23,6 @@ This CSV file contains the fire incident data. The columns in the file are:
 - `TFS_Arrival_Time`: The timestamp when Toronto Fire Services arrived at the scene.
 - `Latitude`: Latitude of the incident location.
 - `Longitude`: Longitude of the incident location.
-
-Example data (first 3 lines):
-
-```csv
-Estimated_Dollar_Loss,Number_of_responding_personnel,Possible_Cause,TFS_Arrival_Time,Latitude,Longitude
-20000,47,52 - Electrical Failure,2020-01-01T00:46:05,43.71523573,-79.23910745
-500,22,"98 - Unintentional, cause undetermined",2020-01-01T00:55:17,43.68760327,-79.35415411
-1000,30,"Fire - Unknown Cause",2020-01-01T01:05:10,43.75849216,-79.31223325
-```
 
 ### 3. Performance Measurements
 
