@@ -1,4 +1,3 @@
-```markdown
 # Fire Incident Analysis with Data Structures
 
 ## Overview
